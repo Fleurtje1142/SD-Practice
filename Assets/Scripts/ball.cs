@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using TMPro.EditorUtilities;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float yPosition = -2f;
     public float xSpeed = 1f;
     public float ySpeed = 1f;
+    public TMP_Text scoreText;
 
     // Start is called before the first frame update
     void Start()

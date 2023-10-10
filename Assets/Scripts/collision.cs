@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class collision : MonoBehaviour
     public float yPosition = -2f;
     public float xSpeed = 1f;
     public float ySpeed = 1f;
+    public TMP_Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +28,14 @@ public class collision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("AUW!");
+        
         if (collision.gameObject.CompareTag("horizontalWall")) 
         {
-            Debug.Log("my head or feet");
+            
             ySpeed = ySpeed * -1f;
         } else if (collision.gameObject.CompareTag("verticalWall"))
         {
-            Debug.Log("my but of my crotch");
+            
             xSpeed = xSpeed * -1f;
         }
     }
