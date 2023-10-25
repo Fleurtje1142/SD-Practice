@@ -9,8 +9,8 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public float xPosition = -2f;
     public float yPosition = -2f;
-    public float xSpeed = 1f;
-    public float ySpeed = 1f;
+    public float xSpeed = 3f;
+    public float ySpeed = 3f;
     public TMP_Text scoreText;
     
 

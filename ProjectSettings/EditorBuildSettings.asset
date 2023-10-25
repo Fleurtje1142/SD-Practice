@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ball.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/2 player.unity
+    guid: dcf1b08732994d54aa964ca5bf82ee02
+  - enabled: 1
+    path: Assets/Scenes/1 player.unity
+    guid: 7bc49698ce5ceb446a09ce6cfb4e1a08
+  - enabled: 1
+    path: Assets/Scenes/reverse.unity
+    guid: 943716602bfeb3540a8d631a5cb9f7fe
+  - enabled: 1
+    path: Assets/Scenes/homescreen.unity
+    guid: 8167e6de2c1f2a147ba4aed30d81371b
   m_configObjects: {}
