@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class NewBehaviourScript : MonoBehaviour
     public float xSpeed = 1f;
     public float ySpeed = 1f;
     public TMP_Text scoreText;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +24,13 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xPosition= xPosition+xSpeed* Time.deltaTime;
-        yPosition= yPosition+ySpeed* Time.deltaTime;
-        transform.position = new Vector3 (xPosition, yPosition, 0f);
+        xPosition = xPosition + xSpeed * Time.deltaTime;
+        yPosition = yPosition + ySpeed * Time.deltaTime;
+        transform.position = new Vector3(xPosition, yPosition, 0f);
     }
+
+       
+   
+
+   
 }

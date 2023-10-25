@@ -11,6 +11,9 @@ public class collision : MonoBehaviour
     public float xSpeed = 1f;
     public float ySpeed = 1f;
     public TMP_Text scoreText;
+    public int leftscore = 0;
+    public int rightscore = 0;
+    public int winscore = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,22 @@ public class collision : MonoBehaviour
         xPosition = xPosition + xSpeed * Time.deltaTime;
         yPosition = yPosition + ySpeed * Time.deltaTime;
         transform.position = new Vector3(xPosition, yPosition, 0f);
+
+        if (leftscore >= 10)
+        {
+            scoreText.text = "Left player has won!";
+            xPosition = 0;
+            yPosition = 0;
+
+        }
+        else if (rightscore >= 10)
+        {
+            scoreText.text = "Right player has won!";
+            xPosition = 0;
+            yPosition = 0;
+        }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -37,6 +55,22 @@ public class collision : MonoBehaviour
         {
             
             xSpeed = xSpeed * -1f;
+        }
+        else if (collision.gameObject.CompareTag("LeftWall"))
+        {
+            xSpeed = xSpeed * -1f;
+            xPosition = 0f;
+            yPosition = 0f;
+            rightscore++;
+            scoreText.text = leftscore + " - " + rightscore;
+        }
+        else if (collision.gameObject.CompareTag("RightWall"))
+        {
+            xSpeed = xSpeed * -1f;
+            xPosition = 0f;
+            yPosition = 0f;
+            leftscore++;
+            scoreText.text = leftscore + " - " + rightscore;
         }
     }
 
