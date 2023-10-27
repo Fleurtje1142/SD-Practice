@@ -8,6 +8,8 @@ public class paddle : MonoBehaviour
     public string leftOrRight;
     private float maxValue = 3.5f;
 
+   
+    // paddel movement
     void paddleControl(KeyCode up, KeyCode down)
     {
         if (Input.GetKey(up) && transform.position.y <= maxValue) 
@@ -33,10 +35,12 @@ public class paddle : MonoBehaviour
     {
         if(leftOrRight == "left") 
         {
+            // first player keys
             paddleControl(KeyCode.W, KeyCode.S); 
         }
         else if(leftOrRight == "right")
         {
+            // second player keys
             paddleControl(KeyCode.UpArrow, KeyCode.DownArrow);
         }
     }

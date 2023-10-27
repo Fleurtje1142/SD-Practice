@@ -892,6 +892,7 @@ GameObject:
   - component: {fileID: 912408708}
   - component: {fileID: 912408707}
   - component: {fileID: 912408710}
+  - component: {fileID: 912408711}
   m_Layer: 0
   m_Name: right
   m_TagString: verticalWall
@@ -1025,12 +1026,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xPosition: 8.32
   yPosition: 0
-  ySpeed: 3
-  xSpeed: 3
+  ySpeed: 10
+  xSpeed: 10
   scoreText: {fileID: 534097453}
   leftscore: 0
   rightscore: 0
   winscore: 0
+--- !u!50 &912408711
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912408706}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1279934725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,8 +1232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xPosition: -2
   yPosition: -2
-  xSpeed: 1
-  ySpeed: 1
+  xSpeed: 3
+  ySpeed: 3
   scoreText: {fileID: 534097453}
   leftscore: 0
   rightscore: 0

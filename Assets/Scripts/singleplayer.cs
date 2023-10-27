@@ -25,9 +25,11 @@ public class singleplayer : MonoBehaviour
     void Update()
     {
         
+        // padel goes up
         yPosition = yPosition + ySpeed * Time.deltaTime;
         transform.position = new Vector3(xPosition, yPosition, 0f);
-
+         
+        // if paddle touches wall, change direction
     }
 
 
@@ -35,18 +37,23 @@ public class singleplayer : MonoBehaviour
     {
         
         if (collision.gameObject.CompareTag("horizontalWall")) 
-        {  
+        {
+            Debug.Log("Horizontal wall touched!");
             ySpeed = ySpeed * -1f;
         } else if (collision.gameObject.CompareTag("verticalWall"))
         {
-          
             xSpeed = xSpeed * -1.1f;
         }
         else if (collision.gameObject.CompareTag("LeftWall"))
         {
+            // change x direction
             xSpeed = xSpeed * -1f;
+
+            // 
             xPosition = 0f;
             yPosition = 0f;
+
+            // increase score player 2
             rightscore++;
             scoreText.text = leftscore + "-" + rightscore;
         }
