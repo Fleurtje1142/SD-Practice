@@ -38,18 +38,18 @@ public class singleplayer : MonoBehaviour
         
         if (collision.gameObject.CompareTag("horizontalWall")) 
         {
-            Debug.Log("Horizontal wall touched!");
-            ySpeed = ySpeed * -1f;
+            
+            ySpeed = ySpeed * -1f; // change y direction
         } else if (collision.gameObject.CompareTag("verticalWall"))
         {
-            xSpeed = xSpeed * -1.1f;
+            xSpeed = xSpeed * -1.1f; // increase speed when paddle hit
         }
         else if (collision.gameObject.CompareTag("LeftWall"))
         {
             // change x direction
             xSpeed = xSpeed * -1f;
 
-            // 
+            // start position
             xPosition = 0f;
             yPosition = 0f;
 

@@ -24,10 +24,12 @@ public class collision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xPosition = xPosition + xSpeed * Time.deltaTime;
-        yPosition = yPosition + ySpeed * Time.deltaTime;
+        // paddle goes up
+        xPosition = xPosition + xSpeed * Time.deltaTime;  
+        yPosition = yPosition + ySpeed * Time.deltaTime; 
         transform.position = new Vector3(xPosition, yPosition, 0f);
 
+        // score board till 10 then a player wins
         if (leftscore >= 10)
         {
             scoreText.text = "Left player has won!";
@@ -50,13 +52,13 @@ public class collision : MonoBehaviour
         if (collision.gameObject.CompareTag("horizontalWall")) 
         {
             
-            ySpeed = ySpeed * -1f;
+            ySpeed = ySpeed * -1f; // Change direction of the ball
         } else if (collision.gameObject.CompareTag("verticalWall"))
         {
             if (xSpeed <=8 || xSpeed <= -8)
-            xSpeed = xSpeed * -1.1f;
+            xSpeed = xSpeed * -1.1f; // speeds ball up if hit the paddle
         }
-        else if (collision.gameObject.CompareTag("LeftWall"))
+        else if (collision.gameObject.CompareTag("LeftWall")) // score right player
         {
             xSpeed = xSpeed * -1f;
             xPosition = 0f;
@@ -64,7 +66,7 @@ public class collision : MonoBehaviour
             rightscore++;
             scoreText.text = leftscore + "-" + rightscore;
         }
-        else if (collision.gameObject.CompareTag("RightWall"))
+        else if (collision.gameObject.CompareTag("RightWall")) // score left player
         {
             xSpeed = xSpeed * -1f;
             xPosition = 0f;
