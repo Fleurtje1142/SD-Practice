@@ -29,7 +29,7 @@ public class collision : MonoBehaviour
         yPosition = yPosition + ySpeed * Time.deltaTime; 
         transform.position = new Vector3(xPosition, yPosition, 0f);
 
-        // score board till 10 then a player wins
+        // score board till 10 then a player winst
         if (leftscore >= 10)
         {
             scoreText.text = "Left player has won!";
